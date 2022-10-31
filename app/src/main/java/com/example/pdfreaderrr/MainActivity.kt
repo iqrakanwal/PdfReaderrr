@@ -27,10 +27,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.pdfreaderrr.dialogs.ExitDeltedialog
-import com.example.pdfreaderrr.dialogs.InformationDailog
-import com.example.pdfreaderrr.dialogs.PermissionDialog
-import com.example.pdfreaderrr.dialogs.RemoveAds
+import com.example.pdfreaderrr.dialogs.*
 import com.example.pdfreaderrr.interfaces.ButtonClick
 import com.example.pdfreaderrr.interfaces.ExitDialogCallbacks
 import com.example.pdfreaderrr.ui.SettingConActivity
@@ -463,7 +460,12 @@ class MainActivity : AppCompatActivity(), ButtonClick,
                 true
             }
             R.id.nav_rate_us -> {
+                drawer_layout.closeDrawer(GravityCompat.START)
 
+                val fm: FragmentManager = supportFragmentManager
+                val editNameDialogFragment: RankDialog =
+                    RankDialog()
+                editNameDialogFragment.show(fm, "RankDialog")
 
 
 

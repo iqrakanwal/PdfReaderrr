@@ -452,4 +452,7 @@ class PdfShowingScreen : AppCompatActivity() , OnPageChangeListener, OnLoadCompl
 
     override fun onPdfCLicked(uri: Uri) {
     }
+
+
+
 }

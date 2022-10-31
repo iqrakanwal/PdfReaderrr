@@ -4,7 +4,7 @@ class PdfModel {
     lateinit var name: String
     lateinit var size: String
     lateinit var path: String
-    lateinit var isSelected: Boolean
+     var isSelected: Boolean =false
     fun setMFileDate(readableDate: String) {
 
     }

@@ -25,11 +25,18 @@ class RankDialog():DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dialog!!.window?.setBackgroundDrawableResource(R.drawable.round_corners)
+        dialog!!.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog!!.requestWindowFeature(Window.FEATURE_NO_TITLE)
         var viewRateUsDialog = inflater.inflate(R.layout.rank_managemt, container, false)
         return viewRateUsDialog
     }
 
+    override fun onResume() {
+        super.onResume()
 
+        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
+        val height = ViewGroup.LayoutParams.WRAP_CONTENT
+        dialog!!.window!!.setLayout(width, height)
+
+    }
 }
